@@ -34,7 +34,10 @@ Sx =
 1 \\
 2
 \end{pmatrix}
-=
+$$
+
+$$
+Sx =
 \begin{pmatrix}
 2\cdot1+0\cdot2 \\
 0\cdot1+1\cdot2
@@ -58,7 +61,10 @@ Rx =
 1 \\
 2
 \end{pmatrix}
-=
+$$
+
+$$
+Rx =
 \begin{pmatrix}
 0\cdot1+(-1)\cdot2 \\
 1\cdot1+0\cdot2
@@ -73,7 +79,21 @@ $$
 **Final answers:**
 
 $$
-\boxed{Sx=\begin{pmatrix}2\\2\end{pmatrix}}
-\qquad
-\boxed{Rx=\begin{pmatrix}-2\\1\end{pmatrix}}
+\boxed{
+Sx =
+\begin{pmatrix}
+2 \\
+2
+\end{pmatrix}
+}
+$$
+
+$$
+\boxed{
+Rx =
+\begin{pmatrix}
+-2 \\
+1
+\end{pmatrix}
+}
 $$
