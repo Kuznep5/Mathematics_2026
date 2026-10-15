@@ -10,7 +10,7 @@ A =
 \end{pmatrix}
 $$
 
-For example, calculate \(2A\):
+Calculate \(2A\):
 
 $$
 2A =
