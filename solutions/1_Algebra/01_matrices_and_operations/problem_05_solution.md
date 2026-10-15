@@ -35,12 +35,12 @@ Multiply each row of the matrix by the vector:
 $$
 Ax =
 \begin{pmatrix}
-2 \cdot 4 + (-1) \cdot 2 \\
-1 \cdot 4 + 3 \cdot 2
+2\cdot4 + (-1)\cdot2 \\
+1\cdot4 + 3\cdot2
 \end{pmatrix}
 $$
 
-Calculate each element:
+Calculate:
 
 $$
 Ax =
