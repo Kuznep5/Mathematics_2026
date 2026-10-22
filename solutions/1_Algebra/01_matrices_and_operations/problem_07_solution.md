@@ -1,69 +1,77 @@
-### Exercise 6. Transpose
+### Exercise 7. Identity Matrix, Zero Matrix, and Powers
  
 Given
  
 $$
 A=
 \begin{pmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-\end{pmatrix},\qquad B=
-\begin{pmatrix}
-1 & 0 \\
 2 & 1 \\
--1 & 3 \\
+0 & 2 \\
 \end{pmatrix}.
 $$
  
-**Transposes.** The rows become columns.
+**Neutral elements.** For the $2\times2$ identity matrix $I$ and the zero matrix $0$:
  
 $$
-A^T=
+AI=A,\qquad IA=A,\qquad A+0=A.
+$$
+ 
+For example,
+ 
+$$
+AI=
 \begin{pmatrix}
-1 & 4 \\
-2 & 5 \\
-3 & 6 \\
-\end{pmatrix},\qquad B^T=
-\begin{pmatrix}
-1 & 2 & -1 \\
-0 & 1 & 3 \\
+2 & 1 \\
+0 & 2 \\
 \end{pmatrix}
-$$
- 
-**Product.** $A$ is $2\times3$ and $B$ is $3\times2$, so $AB$ is $2\times2$.
- 
-$$
-AB=
 \begin{pmatrix}
-1\cdot1+2\cdot2+3\cdot(-1) & 1\cdot0+2\cdot1+3\cdot3 \\
-4\cdot1+5\cdot2+6\cdot(-1) & 4\cdot0+5\cdot1+6\cdot3 \\
+1 & 0 \\
+0 & 1 \\
 \end{pmatrix}=
 \begin{pmatrix}
-2 & 11 \\
-8 & 23 \\
-\end{pmatrix}
+2 & 1 \\
+0 & 2 \\
+\end{pmatrix}.
 $$
  
-**Verification of $(AB)^T=B^TA^T$.**
+The matrix $I$ plays the role of the number $1$ in multiplication, and the matrix $0$ plays the role of the number $0$ in addition.
+ 
+**Powers.**
  
 $$
-(AB)^T=
+A^2=
 \begin{pmatrix}
-2 & 8 \\
-11 & 23 \\
-\end{pmatrix}
-$$
- 
-$$
-B^TA^T=
-\begin{pmatrix}
-1\cdot1+2\cdot2+(-1)\cdot3 & 1\cdot4+2\cdot5+(-1)\cdot6 \\
-0\cdot1+1\cdot2+3\cdot3 & 0\cdot4+1\cdot5+3\cdot6 \\
+2\cdot2+1\cdot0 & 2\cdot1+1\cdot2 \\
+0\cdot2+2\cdot0 & 0\cdot1+2\cdot2 \\
 \end{pmatrix}=
 \begin{pmatrix}
-2 & 8 \\
-11 & 23 \\
+4 & 4 \\
+0 & 4 \\
 \end{pmatrix}
 $$
  
-The two matrices are equal. The order of the factors is reversed under transposition. The product $A^TB^T$ in the original order would be a $3\times3$ matrix, so it cannot be equal to the $2\times2$ matrix $(AB)^T$.
+$$
+A^3=A^2A=
+\begin{pmatrix}
+4\cdot2+4\cdot0 & 4\cdot1+4\cdot2 \\
+0\cdot2+4\cdot0 & 0\cdot1+4\cdot2 \\
+\end{pmatrix}=
+\begin{pmatrix}
+8 & 12 \\
+0 & 8 \\
+\end{pmatrix}
+$$
+ 
+**Pattern.** The diagonal entries are $2,4,8$, that is $2^n$. The upper right entries are $1,4,12$, that is $n\cdot2^{n-1}$. Hence
+ 
+$$
+A^n=
+\begin{pmatrix}
+2^n & n\cdot2^{n-1} \\
+0 & 2^n \\
+\end{pmatrix}.
+$$
+ 
+**Verification.** For $n=2$ the formula gives $2^2=4$ and $2\cdot2=4$. For $n=3$ it gives $2^3=8$ and $3\cdot4=12$. Both agree with the direct computation.
+ 
+---
