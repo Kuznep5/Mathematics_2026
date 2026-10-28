@@ -2,7 +2,28 @@
  
 #### Solution
  
-For $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ the formula is $A^{-1}=\frac{1}{ad-bc}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$ when $ad-bc\neq0$.
+For a matrix
+ 
+$$
+A=
+\begin{pmatrix}
+a & b \\
+c & d \\
+\end{pmatrix}
+$$
+ 
+the inverse is given by
+ 
+$$
+A^{-1}=
+\frac{1}{ad-bc}
+\begin{pmatrix}
+d & -b \\
+-c & a \\
+\end{pmatrix}
+$$
+ 
+provided that $ad-bc\neq0$.
  
 Here the determinant is
  
