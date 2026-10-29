@@ -1,12 +1,46 @@
-### Exercise 10. Inverse of a Diagonal Matrix
+# Exercise 10. Inverse of a Diagonal Matrix
  
-#### Solution
+## Question
  
-A diagonal matrix is invertible if and only if all its diagonal entries are nonzero, because its determinant is the product of the diagonal entries.
+Given
  
-- $D$ has diagonal entries $2,\ -3,\ 5$, all nonzero, so $\det D=-30\neq0$ and $D$ is invertible.
-- $E$ has a zero on the diagonal, so $\det E=0$. Its second row is zero, so $E$ is not invertible.
-The inverse of $D$ is obtained by inverting each diagonal entry:
+$$
+D=
+\begin{pmatrix}
+2 & 0 & 0 \\
+0 & -3 & 0 \\
+0 & 0 & 5 \\
+\end{pmatrix},\qquad E=
+\begin{pmatrix}
+2 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 5 \\
+\end{pmatrix}.
+$$
+ 
+Without using Gauss–Jordan elimination, decide which matrix is invertible. For the invertible matrix, give the inverse and check the result by multiplication.
+ 
+## Solution
+ 
+**Method.** The determinant of a diagonal matrix is the product of its diagonal entries. Therefore a diagonal matrix is invertible if and only if all its diagonal entries are nonzero, and in that case the inverse is the diagonal matrix of reciprocals.
+ 
+**Step 1. The matrix $D$.** Its diagonal entries are $2$, $-3$, $5$, all nonzero:
+ 
+$$
+\det D=2\cdot(-3)\cdot5=-30\neq0.
+$$
+ 
+Hence $D$ is invertible.
+ 
+**Step 2. The matrix $E$.** It has a zero on the diagonal:
+ 
+$$
+\det E=2\cdot0\cdot5=0.
+$$
+ 
+Hence $E$ is not invertible. This is also visible directly: the second row of $E$ is zero, so the rows are linearly dependent.
+ 
+**Step 3. The inverse of $D$.** Replace each diagonal entry by its reciprocal:
  
 $$
 D^{-1}=
@@ -17,7 +51,7 @@ D^{-1}=
 \end{pmatrix}.
 $$
  
-Check by multiplication:
+**Step 4. Check by multiplication.** The product of two diagonal matrices is the diagonal matrix of the products of the corresponding diagonal entries:
  
 $$
 DD^{-1}=
@@ -39,3 +73,5 @@ DD^{-1}=
 \end{pmatrix}
 =I.
 $$
+ 
+**Conclusion.** The matrix $D$ is invertible with the inverse shown above, and $E$ is not invertible.
