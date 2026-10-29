@@ -1,7 +1,9 @@
-### Exercise 6. Transpose
- 
-Given
- 
+# Exercise 6. Transpose
+
+## Question
+
+For
+
 $$
 A=
 \begin{pmatrix}
@@ -12,11 +14,19 @@ A=
 1 & 0 \\
 2 & 1 \\
 -1 & 3 \\
-\end{pmatrix}.
+\end{pmatrix}
 $$
- 
-**Transposes.** The rows become columns.
- 
+
+compute $A^T$, $B^T$, and $AB$. Then verify in this example that
+
+$$
+(AB)^T=B^TA^T.
+$$
+
+## Solution
+
+**Transposes.** Transposition turns the rows of a matrix into columns:
+
 $$
 A^T=
 \begin{pmatrix}
@@ -27,11 +37,11 @@ A^T=
 \begin{pmatrix}
 1 & 2 & -1 \\
 0 & 1 & 3 \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
- 
-**Product.** $A$ is $2\times3$ and $B$ is $3\times2$, so $AB$ is $2\times2$.
- 
+
+**Product.** $A$ is $2\times3$ and $B$ is $3\times2$, so $AB$ is defined and has size $2\times2$. Each entry is a row of $A$ times a column of $B$:
+
 $$
 AB=
 \begin{pmatrix}
@@ -41,19 +51,21 @@ AB=
 \begin{pmatrix}
 2 & 11 \\
 8 & 23 \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
- 
-**Verification of $(AB)^T=B^TA^T$.**
- 
+
+**Verification of $(AB)^T=B^TA^T$.** The left side is the transpose of the product:
+
 $$
 (AB)^T=
 \begin{pmatrix}
 2 & 8 \\
 11 & 23 \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
- 
+
+The right side is computed with the factors in reversed order:
+
 $$
 B^TA^T=
 \begin{pmatrix}
@@ -63,7 +75,7 @@ B^TA^T=
 \begin{pmatrix}
 2 & 8 \\
 11 & 23 \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
- 
-The two matrices are equal. The order of the factors is reversed under transposition. The product $A^TB^T$ in the original order would be a $3\times3$ matrix, so it cannot be equal to the $2\times2$ matrix $(AB)^T$.
+
+The two matrices are equal, so the property holds in this example. The order of the factors is reversed under transposition. The product $A^TB^T$ in the original order would be a $3\times3$ matrix, so it cannot be equal to the $2\times2$ matrix $(AB)^T$.
