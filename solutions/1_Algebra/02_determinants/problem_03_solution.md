@@ -27,7 +27,7 @@ The value $\det A$ , a predicted value of $\det B$, and a verification of the pr
 
 ### Method and steps
 
-*Step 1. Compute $\det A$ by Sarrus' rule.* The plus terms are $1\cdot3\cdot1=3$, $2\cdot1\cdot2=4$ and $0\cdot0\cdot1=0$. The minus terms are $0\cdot3\cdot2=0$, $1\cdot1\cdot1=1$ and $2\cdot0\cdot1=0$. Hence
+Step 1. Compute $\det A$ by Sarrus' rule. The plus terms are $1\cdot3\cdot1=3$, $2\cdot1\cdot2=4$ and $0\cdot0\cdot1=0$. The minus terms are $0\cdot3\cdot2=0$, $1\cdot1\cdot1=1$ and $2\cdot0\cdot1=0$. Hence
 
 $$
 \det A = (3+4+0)-(0+1+0) = 7-1 = 6.
