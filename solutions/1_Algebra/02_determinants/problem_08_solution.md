@@ -18,7 +18,7 @@ The values $\det(AB)$, $\det(BA)$, $\det(A^{-1}B)$ if it exists, and an explanat
 
 *Step 1. Use multiplicativity.* For square matrices of the same size, $\det(XY)=\det X\cdot\det Y$.
 
-*Step 2. Compute $\det(AB)$.*
+Step 2. Compute $\det(AB)$.
 
 $$
 \det(AB) = \det A\cdot\det B = 3\cdot(-5) = -15.
