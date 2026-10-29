@@ -24,7 +24,7 @@ $$
 \det(AB) = \det A\cdot\det B = 3\cdot(-5) = -15.
 $$
 
-*Step 3. Compute $\det(BA)$.*
+Step 3. Compute $\det(BA)$.
 
 $$
 \det(BA) = \det B\cdot\det A = (-5)\cdot 3 = -15.
