@@ -1,5 +1,9 @@
-### Exercise 3. Swapping Two Rows
- 
+# Exercise 3. Swapping Two Rows
+
+## Question
+
+For
+
 $$
 A=
 \begin{pmatrix}
@@ -8,19 +12,29 @@ A=
 2 & 1 & 1 \\
 \end{pmatrix}
 $$
- 
-By Sarrus' rule,
- 
+
+compute $\det A$. Then form a matrix $B$ by swapping the first and second rows of $A$. First predict $\det B$ using a determinant property, and then verify your prediction by calculation.
+
+## Solution
+
+### Given
+
+The matrix $A$ from the Question, and $B$ obtained from $A$ by swapping $R_1$ and $R_2$.
+
+### Find
+
+The value $\det A$, a predicted value of $\det B$, and a verification of the prediction.
+
+### Method and steps
+
+*Step 1. Compute $\det A$ by Sarrus' rule.* The plus terms are $1\cdot3\cdot1=3$, $2\cdot1\cdot2=4$ and $0\cdot0\cdot1=0$. The minus terms are $0\cdot3\cdot2=0$, $1\cdot1\cdot1=1$ and $2\cdot0\cdot1=0$. Hence
+
 $$
-\begin{aligned}
-\det A &= (1\cdot 3\cdot 1+2\cdot 1\cdot 2+0\cdot 0\cdot 1)-(0\cdot 3\cdot 2+1\cdot 1\cdot 1+2\cdot 0\cdot 1) \\
-       &= (3+4+0)-(0+1+0) \\
-       &= 6.
-\end{aligned}
+\det A = (3+4+0)-(0+1+0) = 7-1 = 6.
 $$
- 
-Let $B$ be obtained from $A$ by swapping the first and second rows:
- 
+
+*Step 2. Write down $B$.*
+
 $$
 B=
 \begin{pmatrix}
@@ -29,17 +43,21 @@ B=
 2 & 1 & 1 \\
 \end{pmatrix}.
 $$
- 
-**Prediction.** Swapping two rows changes the sign of the determinant, so $\det B=-\det A=-6$.
- 
-**Verification.**
- 
+
+*Step 3. Predict $\det B$.* Swapping two rows multiplies the determinant by $-1$. Therefore
+
 $$
-\begin{aligned}
-\det B &= (0\cdot 2\cdot 1+3\cdot 0\cdot 2+1\cdot 1\cdot 1)-(1\cdot 2\cdot 2+0\cdot 0\cdot 1+3\cdot 1\cdot 1) \\
-       &= (0+0+1)-(4+0+3) \\
-       &= -6.
-\end{aligned}
+\det B = -\det A = -6.
 $$
- 
+
+*Step 4. Verify by Sarrus' rule.* The plus terms are $0\cdot2\cdot1=0$, $3\cdot0\cdot2=0$ and $1\cdot1\cdot1=1$. The minus terms are $1\cdot2\cdot2=4$, $0\cdot0\cdot1=0$ and $3\cdot1\cdot1=3$. Hence
+
+$$
+\det B = (0+0+1)-(4+0+3) = 1-7 = -6.
+$$
+
 The calculation confirms the prediction.
+
+### Answer
+
+$\det A=6$, predicted $\det B=-6$, verified $\det B=-6$.
