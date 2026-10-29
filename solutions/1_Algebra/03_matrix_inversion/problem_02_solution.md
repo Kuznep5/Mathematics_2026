@@ -1,8 +1,22 @@
-### Exercise 2. Formula for a 2×2 Matrix
+# Exercise 2. Formula for a 2×2 Matrix
  
-#### Solution
+## Question
  
-For a matrix
+Find the inverse of
+ 
+$$
+A=
+\begin{pmatrix}
+3 & 2 \\
+5 & 4 \\
+\end{pmatrix}
+$$
+ 
+using the formula for a $2\times2$ matrix. At the end, check the result by computing one product with $A$.
+ 
+## Solution
+ 
+**Method.** For a $2\times2$ matrix there is an explicit formula. If
  
 $$
 A=
@@ -12,7 +26,7 @@ c & d \\
 \end{pmatrix}
 $$
  
-the inverse is given by
+and $ad-bc\neq0$, then
  
 $$
 A^{-1}=
@@ -20,18 +34,20 @@ A^{-1}=
 \begin{pmatrix}
 d & -b \\
 -c & a \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
  
-provided that $ad-bc\neq0$.
+In words: swap the diagonal entries, change the signs of the off-diagonal entries, and divide by the determinant. The condition $ad-bc\neq0$ is necessary, because the formula divides by the determinant.
  
-Here the determinant is
+**Step 1. The determinant.** Here $a=3$, $b=2$, $c=5$, $d=4$, so
  
 $$
-\det A = 3\cdot4-2\cdot5 = 2 \neq 0,
+\det A = 3\cdot4-2\cdot5 = 12-10 = 2 \neq 0.
 $$
  
-so the inverse exists. Applying the formula:
+The determinant is nonzero, so the inverse exists.
+ 
+**Step 2. Apply the formula.**
  
 $$
 A^{-1}=
@@ -42,7 +58,7 @@ A^{-1}=
 \end{pmatrix}
 $$
  
-Therefore
+Multiplying every entry by $\frac12$ gives
  
 $$
 A^{-1}=
@@ -52,13 +68,23 @@ A^{-1}=
 \end{pmatrix}.
 $$
  
-Check by computing $AA^{-1}$:
+**Step 3. Check.** By the definition of the inverse, the product $AA^{-1}$ must be $I$:
  
 $$
 AA^{-1}=
 \begin{pmatrix}
 3\cdot2+2\cdot\left(-\frac{5}{2}\right) & 3\cdot(-1)+2\cdot\frac{3}{2} \\
 5\cdot2+4\cdot\left(-\frac{5}{2}\right) & 5\cdot(-1)+4\cdot\frac{3}{2} \\
+\end{pmatrix}
+$$
+ 
+Simplifying the entries:
+ 
+$$
+AA^{-1}=
+\begin{pmatrix}
+6-5 & -3+3 \\
+10-10 & -5+6 \\
 \end{pmatrix}
 $$
  
@@ -72,3 +98,5 @@ AA^{-1}=
 \end{pmatrix}
 =I.
 $$
+ 
+The check succeeds, so the inverse is correct.
