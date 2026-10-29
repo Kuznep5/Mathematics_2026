@@ -23,7 +23,7 @@ The matrix $A$ from the Question, and $B$ obtained from $A$ by swapping $R_1$ an
 
 ### Find
 
-The value $\det A$, a predicted value of $\det B$, and a verification of the prediction.
+The value $\det A$ , a predicted value of $\det B$, and a verification of the prediction.
 
 ### Method and steps
 
