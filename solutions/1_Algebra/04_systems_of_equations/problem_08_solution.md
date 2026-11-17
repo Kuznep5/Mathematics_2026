@@ -1,63 +1,127 @@
-### Exercise 8. Two Systems with the Same Coefficient Matrix
- 
-**Problem.** Solve
- 
+# Exercise 8. Two Systems with the Same Coefficient Matrix
+
+## Question
+
+Solve the two systems using elimination.
+
+**System 1**
+
 $$
 \begin{cases}
 2x+y=5, \\
-x-y=1,
+x-y=1.
 \end{cases}
-\qquad
+$$
+
+**System 2**
+
+$$
 \begin{cases}
 2x+y=1, \\
 x-y=4.
 \end{cases}
 $$
- 
-**System 1.**
- 
+
+Compare the successive elimination steps. Explain which part of the calculation is the same in both cases and why.
+
+## Solution
+
+**Method.** Both systems have the same coefficient matrix but different right-hand side vectors:
+
+$$
+A=\begin{pmatrix}
+2 & 1 \\
+1 & -1 \\
+\end{pmatrix},\qquad
+b_1=\begin{pmatrix}
+5 \\
+1 \\
+\end{pmatrix},\qquad
+b_2=\begin{pmatrix}
+1 \\
+4 \\
+\end{pmatrix}.
+$$
+
+Use the same row operation in both systems and compare the transformed coefficient entries.
+
+### System 1
+
+**Step 1. Write the augmented matrix.**
+
 $$
 \begin{pmatrix}
 2 & 1 & \mid & 5 \\
 1 & -1 & \mid & 1 \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
- 
-Apply $R_2\leftarrow 2R_2-R_1$:
- 
+
+**Step 2. Eliminate $x$ from the second row.** Apply $R_2\leftarrow 2R_2-R_1$:
+
 $$
 \begin{pmatrix}
 2 & 1 & \mid & 5 \\
 0 & -3 & \mid & -3 \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
- 
-Hence $y=1$ and $2x=5-1=4$, so $x=2$.
- 
-**System 2.**
- 
+
+The second row gives $-3y=-3$, so $y=1$. The first row then gives $2x+1=5$, so $x=2$.
+
+**Verification.** $2\cdot2+1=5$ and $2-1=1$.
+
+### System 2
+
+**Step 1. Write the augmented matrix.**
+
 $$
 \begin{pmatrix}
 2 & 1 & \mid & 1 \\
 1 & -1 & \mid & 4 \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
- 
-Apply the same operation $R_2\leftarrow 2R_2-R_1$:
- 
+
+**Step 2. Apply the same elimination operation.** Again use $R_2\leftarrow 2R_2-R_1$:
+
 $$
 \begin{pmatrix}
 2 & 1 & \mid & 1 \\
 0 & -3 & \mid & 7 \\
-\end{pmatrix}
+\end{pmatrix}.
 $$
- 
-Hence $y=-\tfrac73$ and $2x=1-y=\tfrac{10}{3}$, so $x=\tfrac53$.
- 
-**Check.** System 1: $2\cdot2+1=5$, $2-1=1$. System 2: $\tfrac{10}{3}-\tfrac73=1$, $\tfrac53+\tfrac73=4$.
- 
-**Comparison.** The row operations and the coefficient part of the matrix (the first two columns, with rows $2,1$ and $0,-3$) are identical in both cases. Only the last column changes. The operations are chosen using the coefficients alone, and the right-hand side is just transformed by the same operations.
- 
-**Answer.** System 1: $(2,1)$. System 2: $\left(\tfrac53,\,-\tfrac73\right)$.
- 
----
+
+The second row gives $-3y=7$, hence $y=-\frac73$. Substitution into the first row gives
+
+$$
+2x=1-y=1+\frac73=\frac{10}{3},\qquad x=\frac53.
+$$
+
+**Verification.**
+
+$$
+\begin{aligned}
+2\cdot\frac53-\frac73 &= \frac{10}{3}-\frac73=1, \\
+\frac53-\left(-\frac73\right) &= \frac{12}{3}=4.
+\end{aligned}
+$$
+
+### Comparison of the elimination steps
+
+In both systems the operation is $R_2\leftarrow2R_2-R_1$. The coefficient rows change in exactly the same way:
+
+$$
+\begin{pmatrix}
+2 & 1 \\
+1 & -1 \\
+\end{pmatrix}
+\quad\longrightarrow\quad
+\begin{pmatrix}
+2 & 1 \\
+0 & -3 \\
+\end{pmatrix}.
+$$
+
+Only the right-hand sides change: the lower entry becomes $2\cdot1-5=-3$ in System 1, but $2\cdot4-1=7$ in System 2. The elimination step is shared because the coefficient matrix $A$ is identical in both systems. Different right-hand sides lead to different solutions after the same coefficient reduction.
+
+### Answer
+
+System 1: $(x,y)=(2,1)$. System 2: $(x,y)=(\frac53,-\frac73)$. The elimination of the coefficient matrix is the reusable part.
