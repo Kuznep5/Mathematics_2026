@@ -43,7 +43,7 @@ $$
 **Step 3. Use the angle formula.** For two nonzero vectors,
 
 $$
-\cos\theta=\frac{u\cdot v}{\|u\|\,\|v\|}.
+\cos\theta=\frac{u\cdot v}{\|u\|\*\|v\|}.
 $$
 
 Thus
