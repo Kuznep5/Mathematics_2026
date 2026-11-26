@@ -1,86 +1,72 @@
-# Exercise 2. A Line in Space
+# Exercise 3. Plane Through a Point with a Given Normal Vector
 
 ## Question
 
-Given
-
-$$
-L:(x,y,z)=(2,-1,3)+t(1,2,-2),
-$$
-
-state a point on the line and its direction vector, check whether $P=(4,3,-1)$ lies on $L$, and find the point corresponding to $t=-1$.
+Find the equation of the plane through $P=(1,-2,3)$ and perpendicular to $n=(2,1,-1)$. Check the result by substituting the point $P$ and explain the role of the normal vector.
 
 ## Solution
 
 ### Given
 
-A parametric line $L$ in three-dimensional space and a point $P=(4,3,-1)$.
+A point $P=(1,-2,3)$ and a nonzero normal vector $n=(2,1,-1)$.
 
 ### Find
 
-One point on $L$, its direction vector, a membership test for $P$, and the point obtained by setting $t=-1$.
+A Cartesian equation of the plane, a substitution check for $P$, and the geometric meaning of $n$.
 
 ### Method and steps
 
-**Step 1. Read the parametric representation.** In the expression $r=r_0+tv$, the fixed vector $r_0$ gives a point on the line when $t=0$, and $v$ gives its direction. Thus
+**Step 1. Recall the point-normal equation.** If the plane passes through $P=(x_0,y_0,z_0)$ and has normal vector $n=(a,b,c)$, then every point $X=(x,y,z)$ of the plane satisfies
 
 $$
-r_0=(2,-1,3),\qquad v=(1,2,-2).
+n\cdot\overrightarrow{PX}=0.
 $$
 
-The coordinate equations are
+The vector from $P$ to any point $X$ on the plane lies inside the plane and is therefore perpendicular to the normal.
+
+**Step 2. Substitute the given data.** The displacement vector is
 
 $$
-\begin{cases}
-x=2+t,\\
-y=-1+2t,\\
-z=3-2t.
-\end{cases}
+\overrightarrow{PX}=(x-1,y+2,z-3).
 $$
 
-**Step 2. Test whether $P$ lies on $L$.** All three coordinate equations must hold for the same value of $t$. From the $x$-coordinate,
+Taking the dot product with $n$ gives
 
 $$
-4=2+t\quad\Rightarrow\quad t=2.
+2(x-1)+(y+2)-(z-3)=0.
 $$
 
-Check this value in the other two coordinates:
+**Step 3. Simplify the equation.** Expand the brackets and collect the constants:
 
 $$
 \begin{aligned}
-y&=-1+2\cdot2=3,\\
-z&=3-2\cdot2=-1.
+2x-2+y+2-z+3&=0,\\
+2x+y-z+3&=0.
 \end{aligned}
 $$
 
-These match the $y$- and $z$-coordinates of $P$. Hence $P$ belongs to the line, with parameter $t=2$.
+An equivalent form is $2x+y-z=-3$.
 
-**Step 3. Evaluate the line at $t=-1$.** Substitute $-1$ into each coordinate:
-
-$$
-\begin{aligned}
-x&=2+(-1)=1,\\
-y&=-1+2(-1)=-3,\\
-z&=3-2(-1)=5.
-\end{aligned}
-$$
-
-The required point is $(1,-3,5)$.
-
-**Step 4. Verify the displacement.** The point for $t=-1$ must differ from $r_0$ by $-v$:
+**Step 4. Check the point $P$.** Substitute $(1,-2,3)$ into the equation:
 
 $$
-(1,-3,5)-(2,-1,3)=(-1,-2,2)=-(1,2,-2).
+2\cdot1+(-2)-3+3=2-2-3+3=0.
 $$
 
-This is exactly the expected change.
+Thus the required point lies on the plane.
+
+**Step 5. Explain the normal vector.** The coefficients of $x,y,z$ are $(2,1,-1)$, which are the components of $n$. Any two points in the plane determine a vector $w$ with $n\cdot w=0$. Consequently, the normal describes the plane's orientation, while the given point fixes its position.
 
 ### Answer
 
-A point on the line is $(2,-1,3)$, and its direction vector is $(1,2,-2)$. The point $P=(4,3,-1)$ lies on $L$ at $t=2$. At $t=-1$, the point is $(1,-3,5)$.
+$$
+\Pi:2x+y-z+3=0.
+$$
+
+Its normal vector is $n=(2,1,-1)$, and $P$ satisfies the equation.
 
 ## Geometric visualization
 
-![A parametrized line in space and three marked points](figures/problem_02.png)
+![Plane through P with its normal vector](figures/problem_03.png)
 
-The three marked positions correspond to $t=-1$, $t=0$, and $t=2$. They lie on one line directed by $v=(1,2,-2)$.
+The orange arrow represents the normal $n=(2,1,-1)$ at $P$; the translucent surface represents the plane through that point.
